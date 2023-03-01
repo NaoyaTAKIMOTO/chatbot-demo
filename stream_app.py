@@ -56,7 +56,7 @@ def generate_text_with_memory(question):
 st.session_state.tweet = ""
 st.session_state.text_error = ""
 
-st.set_page_config(page_title="Tweet", page_icon="🤖")
+st.set_page_config(page_title="生成AI検索", page_icon="🤖")
 if "tweet" not in st.session_state:
     st.session_state.tweet = ""
 if "image" not in st.session_state:
@@ -83,16 +83,16 @@ st.write(
 )
 
 # Render Streamlit page
-st.title("生成型AIデモ")
+st.title("生成型AI検索デモ")
 st.markdown(
     """
-    ## GPT-3 のデモ
-    プロンプトによる反応の違い
+    ## GPT-3とgoogle検索によるデモ
+    追加の質問ができる
     """
 )
 
 question = st.text_input(
-    label="質問文", placeholder="シャア専用ザクより遅いモビルスーツを列挙してください。")
+    label="質問文", placeholder="例：シャア専用ザクより遅いモビルスーツを列挙してください。")
 
 answer = ""
 col1, col2 = st.columns(2)
@@ -105,7 +105,7 @@ if st.button(
 st.write('Answer:', answer)
 if len(answer) > 0:
     answer2 = ""
-    question2 = st.text_input(label="追加で質問文", placeholder="日本語で答えてください")
+    question2 = st.text_input(label="追加で質問文", placeholder="例：日本語で答えてください。")
     if st.button(
         label="質問をする",
         type="primary",

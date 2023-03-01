@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "chatbot-demo"
+version = "0.1.0"
+description = ""
+authors = ["Naoya TAKIMOTO <ibanstraght@gmail.com>"]
+readme = "README.md"
+packages = [{include = "chatbot_demo"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+langchain = "^0.0.94"
+openai = "^0.26.5"
+jupyter = "^1.0.0"
+google-api-python-client = "^2.79.0"
+wolframalpha = "^5.0.0"
+streamlit = "^1.19.0"
+google-search-results = "^2.4.1"
+
+[tool.poetry.group.dev.dependencies]
+autopep8 = "^2.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

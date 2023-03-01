@@ -9,7 +9,6 @@ import os
 import json
 
 
-
 search = GoogleSearchAPIWrapper()
 wolfram = WolframAlphaAPIWrapper()
 
